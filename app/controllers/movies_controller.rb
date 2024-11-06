@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   
   def update
-    
+
     m_id = params.fetch("the_id")
 
     the_movie = Movie.where ({ :id => m_id})
@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
 
     the_movie.save
 
-    redirect_to("/movies/#{the_movie.id}")
+    redirect_to("/movies/#{the_movie.id }")
 
 
   end 

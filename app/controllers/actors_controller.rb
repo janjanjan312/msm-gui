@@ -4,7 +4,7 @@ class ActorsController < ApplicationController
 
     a_id = params.fetch("the_id")
 
-    the_actor = Actor.where ({ :id => a_id})
+    the_actor = Actor.where({ :id => a_id}).at(0)
 
     the_actor.name = params.fetch("the_name")
     the_actor.dob = params.fetch("the_dob")

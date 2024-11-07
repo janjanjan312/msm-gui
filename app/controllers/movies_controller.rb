@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
     m_id = params.fetch("the_id")
 
-    the_movie = Movie.where ({ :id => m_id})
+    the_movie = Movie.where({ :id => m_id}).at(0)
 
     the_movie.title = params.fetch("the_title")
     the_movie.year = params.fetch("the_year")

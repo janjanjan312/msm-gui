@@ -4,7 +4,7 @@ class DirectorsController < ApplicationController
 
     a_id = params.fetch("the_id")
 
-    the_director = director.where ({ :id => a_id})
+    the_director = Director.where({ :id => a_id}).at(0)
 
     the_director.name = params.fetch("the_name")
     the_director.dob = params.fetch("the_dob")
